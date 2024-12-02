@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.task-list-item::before {
+  @apply hidden;
+}
+
+.task-list-item {
+  @apply list-none;
+}
+
+.footnotes {
+  @apply pt-8 mt-12 border-t border-gray-200 dark:border-gray-700;
+}
+
+.csl-entry {
+  @apply my-5;
+}
+
+.text-align-center {
+  display: flex;
+  align-items: center;
+}
+
+.loader {
+  position: relative;
+}
+
+.btn__text {
+  transition: all 0.2s;
+}
+
+.btn_loading .btn__text {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.btn_loading::after {
+  content: '';
+  position: absolute;
+  width: 1.3rem;
+  height: 1.3rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: .2rem solid transparent;
+  border-top-color: var(--bs-gray);
+  border-bottom-color: var(--bs-gray);
+  border-radius: 50%;
+  animation: btn-loading-spinner 1s linear infinite;
+}
+
+@keyframes btn-loading-spinner {
+  from {
+    transform: rotate(0turn);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+/* https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied */
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}

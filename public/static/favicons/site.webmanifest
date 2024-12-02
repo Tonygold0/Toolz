@@ -1,0 +1,14 @@
+{
+  "name": "Ajemark Hub Tools",
+  "short_name": "AH Tools",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "55x55",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "display": "standalone"
+}
